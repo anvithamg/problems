@@ -53,3 +53,23 @@ class Solution {
         return result;
     }
 }
+
+class Solution2 {
+    public int[] shuffle(int[] nums, int n) {
+        int[] result = new int[2*n];
+        int j = 0;
+        int k = n;
+        boolean flag = true;
+        for (int i = 0; i < 2*n; ++i) {
+            if (flag) {
+                result[i] = nums[j++];
+                flag = !flag;
+            }
+            else {
+                result[i] = nums[k++];
+                flag = !flag;
+            }
+        }
+        return result;
+    }
+}
