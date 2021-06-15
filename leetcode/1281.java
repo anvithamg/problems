@@ -38,3 +38,22 @@ class Solution {
         return result;
     }
 }
+
+class Solution {
+    public int subtractProductAndSum(int n) {
+        String S = Integer.toString(n);
+        int product = 1; 
+        int result= 0;
+        int sum = 0;
+        int remainder = 0;
+        while(n>0) {
+            remainder = n % 10;
+            n = n / 10;
+            sum = sum + remainder;
+            product = product * remainder;
+        }
+        result = product - sum;
+        
+        return result;
+    }
+}
