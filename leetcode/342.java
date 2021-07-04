@@ -1,3 +1,4 @@
+package leetcode;
 /*342. Power of Four
 Easy
 
