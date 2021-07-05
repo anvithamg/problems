@@ -33,18 +33,16 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 */
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        int i = 0;
-        for(int j=m;j<nums1.length;j++,i++) {
-         nums1[j] = nums2[i];
-        }
-        for(i=0;i<nums1.length;i++) {
-            for(int j=i;j<nums1.length;j++){
-                if(nums1[i]>nums1[j]){
-                    int temp = nums1[i];
-                    nums1[i] = nums1[j];
-                    nums1[j] = temp;
-                }
-            }
+        if (n == 0)
+            return;
+        int i = m - 1;
+        int j = n - 1;
+        int last = m + n - 1;
+        while (j >= 0) {
+            if (i >= 0 && nums1[i] > nums2[j])
+                nums1[last--] = nums1[i--];
+            else
+                nums1[last--] = nums2[j--];
         }
     }
 }
