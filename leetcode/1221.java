@@ -33,7 +33,7 @@ Input: s = "RLRRRLLRLL"
 Output: 2
 Explanation: s can be split into "RL", "RRRLLRLL", since each substring contains an equal number of 'L' and 'R'
 */
-class Solution {
+public class Solution {
     public int balancedStringSplit(String s) {
         int count = 0,r=0,l=0;
         for(int i=0;i<s.length();i++) {
@@ -46,6 +46,12 @@ class Solution {
             
         }
         return count;
+    public static void main(String[] args) {
+        Solution s = new Solution();
+        System.out.println(s.balancedStringSplit("RLRRLLRL"));
+        
+    }() {
+        
     }
 
 }
