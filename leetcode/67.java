@@ -1,0 +1,38 @@
+/*67. Add Binary
+Easy
+
+Given two binary strings a and b, return their sum as a binary string.
+
+ 
+
+Example 1:
+
+Input: a = "11", b = "1"
+Output: "100"
+
+Example 2:
+
+Input: a = "1010", b = "1011"
+Output: "10101"*/
+class Solution {
+    public String addBinary(String a, String b) {
+         StringBuilder str = new StringBuilder();
+        int carry=0,i=a.length()-1,j=b.length()-1;
+      
+        while(i>=0 || j>=0 || carry==1){
+            
+            if(i>=0){
+                carry+=a.charAt(i)-'0';
+            }
+             if(j>=0){
+                carry+=b.charAt(j)-'0';
+            }
+            char ch = (char)(carry%2+'0');
+            str.append(ch); 
+            carry/=2;
+            i--;
+            j--;
+        }
+         return str.reverse().toString();
+    }
+}
