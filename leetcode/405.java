@@ -23,7 +23,7 @@ class Solution {
         if (num == 0)
             return "0";
         else if (num > 0) {
-            StringBuilder ans = new StringBuilder();
+            StringBuffer ans = new StringBuffer();
             while (num > 0) {
                 int rem = num % 16;
                 if (rem < 10) {
