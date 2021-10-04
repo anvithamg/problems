@@ -18,7 +18,7 @@ Input: numRows = 1
 Output: [[1]]*/
 class Solution {
     public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> pascalsTriangle = new List<List<Integer>>();
+        List<List<Integer>> pascalsTriangle = new ArrayList<List<Integer>>();
         List<Integer> t = new ArrayList<Integer>();
         t.add(1);
         pascalsTriangle.add(t);
