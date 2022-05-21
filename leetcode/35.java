@@ -34,15 +34,19 @@ Output: 0*/
 
 class Solution {
     public int searchInsert(int[] nums, int target) {
-        for(int i=0; i<nums.length; i++) {
-            if(nums[i]==target)
-                return i;
+        int beg = 0;
+        int end = nums.length-1;
+        while(beg<=end){
+            int mid = (beg+end)/2;
+            if(nums[mid]==target)
+                return mid;
+            else if(nums[mid]<target){
+                beg = mid+1;
             }
-        int i=0;
-        for(i=0;i<nums.length;i++) {
-            if(nums[i]>target)
-                break;
+            else{
+                end = mid-1;
+            }
         }
-       return i; 
+        return beg;
     }
 }
