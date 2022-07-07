@@ -1,6 +1,4 @@
 /*Solution
-Discuss (999+)
-Submissions
 263. Ugly Number
 Easy
 
